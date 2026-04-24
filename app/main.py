@@ -1,21 +1,17 @@
 import sys
-from pathlib import Path
 
-from PyQt6 import uic
-from PyQt6.QtWidgets import QApplication, QMainWindow
+from PyQt6.QtWidgets import QApplication
 from sqlalchemy import text
 
 import db.database
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-UI_PATH = BASE_DIR / "ui" / "login.ui"
+from services.login_window import LoginWindow
 
 
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi(UI_PATH, self)
-
+def main():
+    app = QApplication(sys.argv)
+    w = LoginWindow()
+    w.show()
+    sys.exit(app.exec())
 
 def test_db_connection() -> None:
     try:
@@ -28,7 +24,4 @@ def test_db_connection() -> None:
 
 if __name__ == "__main__":
     # test_db_connection()
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec())
+    main()
