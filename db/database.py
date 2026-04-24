@@ -33,7 +33,7 @@ SessionLocal = sessionmaker(
 def get_session() -> Iterator[Session]:
     """
     Context manager para manejo seguro de sesión:
-    - commit automático si todo va bien
+    - commit automático si va bien
     - rollback si hay excepción
     - cierre garantizado
     """
