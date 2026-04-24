@@ -48,7 +48,11 @@ class TeacherDAOImp(GenericDAOImp[Teacher, int]):
         teacher = self.session.get(Teacher, teacher_id)
         if not teacher:
             return
-        teacher.modules = [m for m in teacher.modules if m.id != module_id]
+
+        module_to_remove = next((m for m in teacher.modules if m.id == module_id), None)
+        if module_to_remove is not None:
+            teacher.modules.remove(module_to_remove)
+
         self.session.flush()
 
     def count_modules_by_teacher(self, teacher_id: int) -> int:
