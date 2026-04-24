@@ -8,7 +8,7 @@ from sqlalchemy import text
 import db.database
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-UI_PATH = BASE_DIR / "ui" / "main.ui"
+UI_PATH = BASE_DIR / "ui" / "login.ui"
 
 
 class MainWindow(QMainWindow):
@@ -27,7 +27,7 @@ def test_db_connection() -> None:
 
 
 if __name__ == "__main__":
-    test_db_connection()
+    # test_db_connection()
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
