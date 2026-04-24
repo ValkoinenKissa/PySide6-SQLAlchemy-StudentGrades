@@ -15,6 +15,7 @@ UI_PATH = BASE_DIR / "ui" / "login.ui"
 
 
 class LoginWindow(QWidget):
+    # Quitar los warnings, ya que las referencias a las clases solo se calculan en tiempo de ejecución
     if TYPE_CHECKING:
         comboRole: QComboBox
         editUsername: QLineEdit
