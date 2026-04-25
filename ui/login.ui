@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LoginForm</class>
-
+ <class>loginForm</class>
  <widget class="QWidget" name="loginForm">
   <property name="geometry">
    <rect>
@@ -11,18 +10,15 @@
     <height>430</height>
    </rect>
   </property>
-
   <property name="minimumSize">
    <size>
     <width>780</width>
     <height>430</height>
    </size>
   </property>
-
   <property name="windowTitle">
    <string>Inicio de sesión</string>
   </property>
-
   <widget class="QWidget" name="contentWidget">
    <property name="geometry">
     <rect>
@@ -32,7 +28,6 @@
      <height>391</height>
     </rect>
    </property>
-
    <layout class="QVBoxLayout" name="mainLayout">
     <property name="spacing">
      <number>12</number>
@@ -49,24 +44,22 @@
     <property name="bottomMargin">
      <number>20</number>
     </property>
-
     <item>
      <layout class="QHBoxLayout" name="headerLayout">
       <property name="spacing">
        <number>16</number>
       </property>
-
       <item>
        <layout class="QVBoxLayout" name="headerTextLayout">
         <property name="spacing">
          <number>6</number>
         </property>
-
         <item>
          <widget class="QLabel" name="lblTitle">
           <property name="font">
            <font>
             <pointsize>20</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -74,11 +67,10 @@
            <string>INICIO DE SESIÓN</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
-
         <item>
          <widget class="QLabel" name="lblSubtitle">
           <property name="font">
@@ -90,13 +82,12 @@
            <string>Introduce tus credenciales para continuar</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
        </layout>
       </item>
-
       <item>
        <widget class="QLabel" name="lblLogo">
         <property name="minimumSize">
@@ -127,7 +118,6 @@
       </item>
      </layout>
     </item>
-
     <item>
      <widget class="Line" name="lineSeparator">
       <property name="orientation">
@@ -135,11 +125,10 @@
       </property>
      </widget>
     </item>
-
     <item>
      <layout class="QFormLayout" name="credentialsLayout">
       <property name="labelAlignment">
-       <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
       <property name="horizontalSpacing">
        <number>14</number>
@@ -147,11 +136,11 @@
       <property name="verticalSpacing">
        <number>12</number>
       </property>
-
       <item row="0" column="0">
        <widget class="QLabel" name="lblUsername">
         <property name="font">
          <font>
+          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -160,12 +149,11 @@
         </property>
        </widget>
       </item>
-
       <item row="0" column="1">
        <widget class="QLineEdit" name="editUsername">
         <property name="maximumSize">
          <size>
-          <width>260</width>
+          <width>16777215</width>
           <height>16777215</height>
          </size>
         </property>
@@ -174,11 +162,11 @@
         </property>
        </widget>
       </item>
-
       <item row="1" column="0">
        <widget class="QLabel" name="lblPassword">
         <property name="font">
          <font>
+          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -187,12 +175,11 @@
         </property>
        </widget>
       </item>
-
       <item row="1" column="1">
        <widget class="QLineEdit" name="editPassword">
         <property name="maximumSize">
          <size>
-          <width>260</width>
+          <width>16777215</width>
           <height>16777215</height>
          </size>
         </property>
@@ -204,11 +191,11 @@
         </property>
        </widget>
       </item>
-
       <item row="2" column="0">
        <widget class="QLabel" name="lblRole">
         <property name="font">
          <font>
+          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -217,21 +204,18 @@
         </property>
        </widget>
       </item>
-
       <item row="2" column="1">
        <widget class="QComboBox" name="comboRole">
         <property name="maximumSize">
          <size>
-          <width>260</width>
+          <width>16777215</width>
           <height>16777215</height>
          </size>
         </property>
        </widget>
       </item>
-
      </layout>
     </item>
-
     <item>
      <layout class="QHBoxLayout" name="buttonsLayout">
       <item>
@@ -257,7 +241,6 @@
       </item>
      </layout>
     </item>
-
    </layout>
   </widget>
  </widget>

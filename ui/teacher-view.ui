@@ -48,7 +48,7 @@
       <item>
        <widget class="QLabel" name="lblSelectedStudent">
         <property name="text">
-         <string>Alumno/a: -</string>
+         <string>Profesor/a: -</string>
         </property>
        </widget>
       </item>
@@ -94,11 +94,21 @@
          </size>
         </property>
         <property name="columnCount">
-         <number>4</number>
+         <number>6</number>
         </property>
         <column>
          <property name="text">
-          <string>Módulo</string>
+          <string>Alumno/a</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Curso</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Grupo</string>
          </property>
         </column>
         <column>
@@ -113,10 +123,28 @@
         </column>
         <column>
          <property name="text">
-          <string>Estado</string>
+          <string>Notas</string>
          </property>
         </column>
        </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="btnLogout">
+          <property name="text">
+           <string>CERRAR SESIÓN</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnRefresh">
+          <property name="text">
+           <string>REFRESCAR</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
