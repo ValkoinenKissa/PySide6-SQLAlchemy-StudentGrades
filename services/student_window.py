@@ -29,7 +29,7 @@ UI_PATH = BASE_DIR / "ui" / "student-view.ui"
 # Constante con el aprobado general
 PASS_GRADE = Decimal(5.0)
 
-# Dataclass necesaria para la tabla resumen modulo
+# Dataclass necesaria para la tabla
 @dataclass
 class ModuleSummaryRow:
     enrollment_id: int
@@ -57,7 +57,7 @@ class StudentWindow(QWidget):
 
 
         self.user_id: int = user_id
-        # Id real de la tabla student
+        # Id real del usuario, en optional por ni es nulo
         self.current_student_id: Optional[int] = None
         # Todas las filas del resumen
         self.master_rows: list[ModuleSummaryRow] = []
