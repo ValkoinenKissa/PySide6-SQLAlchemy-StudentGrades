@@ -15,6 +15,7 @@ from PyQt6.QtWidgets import (
     QTableWidgetItem,
     QComboBox,
     QPushButton)
+from sqlalchemy.exc import SQLAlchemyError
 
 from dao.grade_dao import GradeDAOImp
 from dao.student_dao import StudentDAOImp
@@ -28,7 +29,7 @@ UI_PATH = BASE_DIR / "ui" / "student-view.ui"
 # Constante con el aprobado general
 PASS_GRADE = Decimal(5.0)
 
-# Dataclass necesaria para la fila resumen
+# Dataclass necesaria para la tabla resumen modulo
 @dataclass
 class ModuleSummaryRow:
     enrollment_id: int
@@ -314,11 +315,14 @@ class StudentWindow(QWidget):
                 #Sino se imprime la media formateada con 2 decimales
                 self.lblGlobalAverage.setText(f"Media general: {overall:.2f}")
 
-        except Exception:
+        except SQLAlchemyError:
             #Si hay algún problema no se muestra nada
             self.lblGlobalAverage.setText("Media general: -")
 
     def _handle_logout(self):
+        from services.login_window import LoginWindow
+        self.login_window = LoginWindow()
+        self.login_window.show()
         self.close()
 
         # Metodo para evitar llamar todo el rato a _showerror
