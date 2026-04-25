@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>StudentWindow</class>
-
+ <class>studentWindow</class>
  <widget class="QWidget" name="studentWindow">
   <property name="windowModality">
    <enum>Qt::NonModal</enum>
   </property>
-
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -15,11 +13,9 @@
     <height>652</height>
    </rect>
   </property>
-
   <property name="windowTitle">
    <string>Panel del alumno</string>
   </property>
-
   <widget class="QWidget" name="mainWidget">
    <property name="geometry">
     <rect>
@@ -29,14 +25,13 @@
      <height>586</height>
     </rect>
    </property>
-
    <layout class="QVBoxLayout" name="mainLayout">
-
     <item>
      <widget class="QLabel" name="lblStudentTitle">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
+        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -44,11 +39,10 @@
        <string>Panel del alumno</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
      </widget>
     </item>
-
     <item>
      <widget class="QLabel" name="lblStudentName">
       <property name="text">
@@ -56,10 +50,8 @@
       </property>
      </widget>
     </item>
-
     <item>
      <layout class="QHBoxLayout" name="topInfoLayout">
-
       <item>
        <widget class="QLabel" name="lblModuleFilter">
         <property name="text">
@@ -67,11 +59,9 @@
         </property>
        </widget>
       </item>
-
       <item>
        <widget class="QComboBox" name="comboModule"/>
       </item>
-
       <item>
        <widget class="QLabel" name="lblGlobalAverage">
         <property name="text">
@@ -79,7 +69,6 @@
         </property>
        </widget>
       </item>
-
       <item>
        <widget class="QPushButton" name="btnLogout">
         <property name="text">
@@ -87,10 +76,8 @@
         </property>
        </widget>
       </item>
-
      </layout>
     </item>
-
     <item>
      <widget class="QLabel" name="lblModuleSummary">
       <property name="text">
@@ -98,12 +85,14 @@
       </property>
      </widget>
     </item>
-
     <item>
      <widget class="QTableWidget" name="modulesSummaryTable">
       <property name="columnCount">
        <number>4</number>
       </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>120</number>
+      </attribute>
       <column>
        <property name="text">
         <string>Módulo</string>
@@ -126,7 +115,6 @@
       </column>
      </widget>
     </item>
-
     <item>
      <widget class="QLabel" name="lblGradesHistory">
       <property name="text">
@@ -134,7 +122,6 @@
       </property>
      </widget>
     </item>
-
     <item>
      <widget class="QListView" name="gradesHistoryList">
       <property name="sizePolicy">
@@ -151,11 +138,9 @@
       </property>
      </widget>
     </item>
-
    </layout>
   </widget>
  </widget>
-
  <resources/>
  <connections/>
 </ui>

@@ -96,6 +96,9 @@
         <property name="columnCount">
          <number>6</number>
         </property>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>120</number>
+        </attribute>
         <column>
          <property name="text">
           <string>Alumno/a</string>
